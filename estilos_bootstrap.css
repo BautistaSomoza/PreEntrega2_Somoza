@@ -1,0 +1,34 @@
+body{
+    background-color: beige;
+}
+.ImagenContenido_cajas{
+    max-width: 50%;
+    max-width: 50%;
+}
+
+main div div div{
+    font-size: 150%;
+    padding-top: 50%;
+    text-align: justify;
+}
+
+.cuerpoSuperior{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.fondo-navbar{
+    background-color: #decfac;
+}
+@media(max-width: 480px){
+    .cuerpoSuperior{
+        display: none;
+    }
+    .cuerpoInferior{
+        margin: 5%;
+    }
+    }
+@media(max-width:991px){
+    main div div div {
+        padding: 0%;
+    }
+}

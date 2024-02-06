@@ -1,0 +1,157 @@
+*{
+    margin: 2px;
+    padding: 2px;
+}
+
+/* DESKTOP */
+/* fondo*/
+body{ 
+    background-color: rgb(100, 156, 100);
+}
+
+/* Trabajo Grilla Index*/    
+.grilla_index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+    grid-template-areas: 
+        "encabezado"
+        "centroSuperior"
+        "centroInferior"
+        "piepagina";
+}
+/* menu de navegacion */
+.barramenu{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-area: encabezado;
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+    background-color: darkolivegreen;
+}
+.menuNavegable{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: justify;
+    color: blanchedalmond;
+    overflow: none;
+}
+
+.fotosecular {
+    max-width: 100%;
+}
+
+.opcionMenu{
+    display: inline;
+    list-style: none;
+}
+/* main */
+.cuerpo_superior{
+    display: grid;
+    grid-area: centroSuperior;
+    grid-column: 1 / 2;
+    grid-row: 2 / 2; 
+    justify-content: center;
+    align-content: center;
+}
+h1{
+    color: blanchedalmond;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+.cuerpo_inferior{
+    display: flex;
+    grid-area: centroInferior;
+    grid-column: 1/2;
+    grid-row: 3/3;
+    justify-content: center;
+    align-content: center;
+    transition: width height 10s;
+}
+.cuerpo_inferior:hover{
+    width: 150%;
+    height: 150%;
+}
+
+.cuerpo_inferior-ElHilo{
+    display: flex;
+    flex-direction: column;
+}
+.cuerpo_inferior-Memo{
+    display: flex;
+    flex-direction: column;
+}
+
+.imagenContenido { 
+    padding-bottom: 4rem;
+}
+                
+.imagenContenido_cajas{
+    width: 400px;
+    height: 400px;
+}
+
+/* footer con redes*/
+
+.barramenuFooter{
+    grid-area: piepagina;
+    grid-column: 1/2;
+    grid-row: 5/5;
+    background-color: darkolivegreen;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.barramenuFooter__lista { 
+    list-style-type: none;
+}
+
+@media(max-width:481px){
+    
+    /* Trabajo Grilla Index*/    
+    .grilla_index {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: 
+            "encabezado"
+            "centroInferior"
+            "piepagina";
+    }
+    /* menu de navegacion */
+    .barramenu{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        grid-area: encabezado;
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+        background-color: darkolivegreen;
+    }
+    
+    .cuerpo_inferior{
+        display: flex;
+        flex-direction: column;
+        grid-area: centroInferior;
+        grid-column: 1/1;
+        grid-row: 2/2;
+    }
+
+    .imagenContenido_cajas{
+        width: 30%;
+        height: 30%;
+    }
+    
+    /* footer con redes*/
+    
+    .barramenuFooter{
+        grid-area: piepagina;
+        grid-column: 1/1;
+        grid-row: 3/3;
+    }
+    
+} 
